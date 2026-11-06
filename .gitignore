@@ -1,0 +1,57 @@
+# =====================================================================
+# BUY & BYE — Monorepo Root .gitignore
+# Prevents accidental upload of confidential files, databases, and secrets
+# =====================================================================
+
+# 1. Confidential Database Dumps & Schemas (Contains plain-text passwords & salaries)
+buynbye_db2.sql
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+**/data/store.json
+**/data/*.json
+
+# 2. Environment Variables & Credentials (CRITICAL: Do not upload .env)
+**/.env
+**/.env.*
+!**/.env.example
+
+# 3. Dependencies & Build Artifacts
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/build/
+**/coverage/
+
+# 4. Backend & Redundant Directories (Web Apps only)
+buyandbye-backend/
+my-react-app/
+Images/
+
+# 5. Loose Root Assets & Temporary Files
+banner.png
+Buy_and_Bye_Logo_Transparent_v2.png
+character.png
+designchange.jpeg
+favicon.png
+index.html
+package-lock.json
+
+# 6. Logs & Tool Cache
+**/logs/
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.oxlintcache
+
+# 7. Operating System & Editor Files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/

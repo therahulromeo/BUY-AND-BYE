@@ -1,0 +1,295 @@
+.navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid var(--border-light);
+  box-shadow: 0 4px 20px -2px rgba(10, 19, 36, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: var(--header-height);
+}
+
+.brand-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition-bounce);
+}
+
+.brand-logo-link:hover .brand-logo-img {
+  transform: scale(1.04);
+}
+
+.navbar-search-container {
+  flex: 1;
+  max-width: 580px;
+  position: relative;
+}
+
+.navbar-search-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.6rem;
+  background: var(--bg-subtle);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  color: var(--dark-900);
+  transition: all var(--transition-fast);
+}
+
+.navbar-search-input:focus {
+  background: #FFFFFF;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 4px rgba(0, 86, 210, 0.12);
+}
+
+.navbar-search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-400);
+  pointer-events: none;
+}
+
+.navbar-search-clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--dark-400);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-700);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-500);
+  background: var(--primary-50);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.action-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--dark-800);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-light);
+}
+
+.action-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+  border-color: var(--primary-200);
+  transform: translateY(-2px);
+}
+
+.action-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--yellow-500);
+  color: var(--dark-950);
+  font-size: 0.72rem;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.order-history-nav-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 42px;
+  padding: 0 0.95rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-subtle);
+  color: var(--dark-850);
+  border: 1.5px solid var(--border-light);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.order-history-nav-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+  border-color: var(--primary-300);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 86, 210, 0.1);
+}
+
+.order-history-nav-icon {
+  color: var(--primary-600);
+  transition: transform var(--transition-fast);
+}
+
+.order-history-nav-btn:hover .order-history-nav-icon {
+  transform: scale(1.1);
+}
+
+.order-history-nav-badge {
+  background: var(--yellow-500);
+  color: var(--dark-950);
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.cart-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  background: var(--primary-gradient);
+  color: #FFFFFF;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: var(--primary-glow);
+  transition: all var(--transition-normal);
+  border: none;
+}
+
+.cart-btn-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(0, 86, 210, 0.45);
+}
+
+.cart-count-bubble {
+  background: var(--yellow-500);
+  color: var(--dark-950);
+  font-size: 0.75rem;
+  font-weight: 900;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-search-container {
+    max-width: 320px;
+  }
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-history-nav-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+  }
+  .order-history-nav-text {
+    display: none;
+  }
+  .order-history-nav-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    font-size: 0.68rem;
+    padding: 1px 5px;
+    border: 2px solid #FFFFFF;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-logo-img {
+    height: 40px;
+  }
+  .navbar-search-container {
+    display: none;
+  }
+  .cart-price-text {
+    display: none;
+  }
+}
+
+.profile-nav-btn {
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.profile-nav-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary-600);
+  border-color: var(--primary-300);
+}
+
+.profile-active-indicator {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  background: #10B981;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(16, 185, 129, 0.4);
+}

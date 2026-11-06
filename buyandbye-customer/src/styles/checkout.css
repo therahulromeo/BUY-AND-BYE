@@ -1,0 +1,118 @@
+/* ========================================================
+   CHECKOUT & ORDER CONFIRMATION STYLES
+   ======================================================== */
+.checkout-modal-card {
+  max-width: 900px;
+  width: 100%;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 2rem;
+}
+
+.checkout-steps {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.75rem;
+}
+
+.checkout-step-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--dark-500);
+}
+
+.checkout-step-pill.active {
+  color: var(--primary-600);
+}
+
+.step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  color: var(--dark-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.checkout-step-pill.active .step-num {
+  background: var(--primary-500);
+  color: #FFFFFF;
+}
+
+.payment-method-card {
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.payment-method-card:hover {
+  border-color: var(--primary-300);
+}
+
+.payment-method-card.selected {
+  border-color: var(--primary-500);
+  background: var(--primary-50);
+}
+
+.checkout-summary-box {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid var(--border-light);
+}
+
+/* Success Modal */
+.success-card {
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.success-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ECFDF5;
+  color: #10B981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 8px 24px -4px rgba(16, 185, 129, 0.35);
+}
+
+.order-code-badge {
+  display: inline-block;
+  background: var(--primary-100);
+  color: var(--primary-800);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0.75rem 0 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}

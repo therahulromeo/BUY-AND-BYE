@@ -1,0 +1,94 @@
+:root {
+  /* ========================================================
+     BUY & BYE BRAND DESIGN SYSTEM
+     Directly matching the official BUY & BYE Mens Clothing Logo
+     ======================================================== */
+
+  /* Primary Royal Blue Scale (From Logo) */
+  --primary-50: #EEF4FF;
+  --primary-100: #DCE7FE;
+  --primary-200: #BAD1FD;
+  --primary-300: #88B4FC;
+  --primary-400: #4F8EFA;
+  --primary-500: #0056D2; /* Master Logo Royal Blue */
+  --primary-600: #0047B3;
+  --primary-700: #00368C;
+  --primary-800: #002766;
+  --primary-900: #001A47;
+  --primary-gradient: linear-gradient(135deg, #0056D2 0%, #00368C 100%);
+  --primary-glow: 0 8px 24px -4px rgba(0, 86, 210, 0.32);
+
+  /* Accent Golden / Canary Yellow Scale (From Logo) */
+  --yellow-50: #FFFDF0;
+  --yellow-100: #FFFBE6;
+  --yellow-200: #FFF4B8;
+  --yellow-300: #FFEB80;
+  --yellow-400: #FFDE42;
+  --yellow-500: #FFC800; /* Master Logo Canary Yellow */
+  --yellow-600: #E6B000;
+  --yellow-700: #B88900;
+  --yellow-800: #8A6500;
+  --yellow-900: #5C4100;
+  --yellow-gradient: linear-gradient(135deg, #FFD200 0%, #FFAA00 100%);
+  --yellow-glow: 0 8px 22px -3px rgba(255, 200, 0, 0.38);
+
+  /* Dark Obsidian / Navy Neutrals */
+  --dark-950: #060B14;
+  --dark-900: #0A1324;
+  --dark-800: #111E38;
+  --dark-700: #1B2B4E;
+  --dark-600: #334155;
+  --dark-500: #64748B;
+  --dark-400: #94A3B8;
+
+  /* Surfaces & Backgrounds */
+  --bg-page: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F1F5F9;
+  --bg-hover: #F8FAFC;
+  --bg-dark-card: #0D182E;
+
+  /* Borders & Dividers */
+  --border-light: #E2E8F0;
+  --border-subtle: #EDF2F7;
+  --border-focus: #0056D2;
+  --border-yellow: rgba(255, 200, 0, 0.4);
+
+  /* Functional Status Colors */
+  --success: #10B981;
+  --success-bg: #ECFDF5;
+  --success-text: #065F46;
+  --danger: #EF4444;
+  --danger-bg: #FEF2F2;
+  --danger-text: #991B1B;
+  --warning: #F59E0B;
+  --warning-bg: #FFFBEB;
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(10, 19, 36, 0.04);
+  --shadow-sm: 0 2px 6px rgba(10, 19, 36, 0.06);
+  --shadow-md: 0 6px 18px rgba(10, 19, 36, 0.08);
+  --shadow-lg: 0 12px 30px -4px rgba(10, 19, 36, 0.12);
+  --shadow-xl: 0 20px 40px -8px rgba(10, 19, 36, 0.16);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout Containers */
+  --container-max: 1280px;
+  --container-wide: 1440px;
+  --header-height: 80px;
+}

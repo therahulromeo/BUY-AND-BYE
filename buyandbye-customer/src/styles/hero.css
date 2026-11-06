@@ -1,0 +1,604 @@
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #0A1324 0%, #002B73 55%, #0056D2 100%);
+  color: #FFFFFF;
+  padding: 4.5rem 0 3.5rem;
+  overflow: hidden;
+  border-bottom: 3px solid var(--yellow-500);
+}
+
+.hero-glow-1 {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 200, 0, 0.18) 0%, rgba(255, 200, 0, 0) 70%);
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: -150px;
+  left: 10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 86, 210, 0.45) 0%, rgba(0, 86, 210, 0) 70%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 3.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 200, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--yellow-400);
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: #FFFFFF;
+}
+
+.hero-title .text-yellow {
+  color: var(--yellow-400);
+  background: linear-gradient(135deg, #FFE600 0%, #FFAA00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-top: 0.35rem;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hero-image-card:hover .hero-main-img {
+  transform: scale(1.05);
+}
+
+.hero-floating-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(10, 19, 36, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--yellow-400);
+}
+
+/* Value Props Strip */
+.value-props-strip {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.value-props-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.prop-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.prop-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--primary-50);
+  color: var(--primary-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.prop-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--dark-900);
+  line-height: 1.2;
+}
+
+.prop-desc {
+  font-size: 0.8rem;
+  color: var(--dark-500);
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-title {
+    font-size: 2.6rem;
+  }
+  .value-props-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .value-props-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .hero-stats {
+    gap: 1.25rem;
+  }
+  .stat-number {
+    font-size: 1.4rem;
+  }
+}
+
+/* ==========================================================
+   DIWALI DHAMAKA THEME & TRENDY BANNER STYLES
+   ========================================================== */
+.hero-section.diwali-theme {
+  background: 
+    radial-gradient(circle at 85% 25%, rgba(245, 158, 11, 0.22) 0%, rgba(245, 158, 11, 0) 55%),
+    radial-gradient(circle at 15% 75%, rgba(168, 85, 247, 0.22) 0%, rgba(168, 85, 247, 0) 60%),
+    radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.15) 0%, transparent 60%),
+    linear-gradient(135deg, #0d011a 0%, #1c0538 30%, #2e0854 60%, #0d1738 100%);
+  border-bottom: 4px solid #F59E0B;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Diwali Rangoli Pattern Watermark */
+.diwali-rangoli-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle, rgba(255, 215, 0, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(255, 140, 0, 0.06) 1.5px, transparent 1.5px);
+  background-size: 36px 36px, 72px 72px;
+  background-position: 0 0, 18px 18px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Toran / Festive fairy lights along banner top */
+.diwali-toran-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.diwali-toran-lights .light {
+  width: 10px;
+  height: 14px;
+  border-radius: 50% 50% 40% 40%;
+  animation: diyaGlow 2s ease-in-out infinite alternate;
+}
+
+.diwali-toran-lights .light-gold {
+  background: #FBBF24;
+  box-shadow: 0 0 10px #F59E0B, 0 0 18px rgba(245, 158, 11, 0.8);
+  animation-delay: 0s;
+}
+
+.diwali-toran-lights .light-red {
+  background: #EF4444;
+  box-shadow: 0 0 10px #DC2626, 0 0 18px rgba(239, 68, 68, 0.8);
+  animation-delay: 0.3s;
+}
+
+.diwali-toran-lights .light-orange {
+  background: #F97316;
+  box-shadow: 0 0 10px #EA580C, 0 0 18px rgba(249, 115, 22, 0.8);
+  animation-delay: 0.6s;
+}
+
+.diwali-toran-lights .light-purple {
+  background: #C084FC;
+  box-shadow: 0 0 10px #A855F7, 0 0 18px rgba(192, 132, 252, 0.8);
+  animation-delay: 0.9s;
+}
+
+.diwali-toran-lights .light-yellow {
+  background: #FEF08A;
+  box-shadow: 0 0 10px #EAB308, 0 0 18px rgba(254, 240, 138, 0.8);
+  animation-delay: 1.2s;
+}
+
+@keyframes diyaGlow {
+  0% { transform: scale(0.9); opacity: 0.75; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+.diwali-glow-amber {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.32) 0%, rgba(245, 158, 11, 0) 70%);
+}
+
+.diwali-glow-purple {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.28) 0%, rgba(168, 85, 247, 0) 70%);
+}
+
+/* Badge Pill */
+.diwali-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.25) 0%, rgba(147, 51, 234, 0.25) 100%);
+  border: 1.5px solid rgba(251, 191, 36, 0.55);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.825rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #FDE047;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+.diwali-diya-emoji {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 6px #F59E0B);
+  animation: diyaFloat 2s ease-in-out infinite alternate;
+}
+
+@keyframes diyaFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-3px) scale(1.08); }
+}
+
+.diwali-sparkle-icon {
+  color: #FDE047;
+  animation: sparkleSpin 4s linear infinite;
+}
+
+@keyframes sparkleSpin {
+  0% { transform: rotate(0deg) scale(0.9); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(0.9); }
+}
+
+/* TRENDY HEADLINE: Everthing is 500! */
+.diwali-trendy-title {
+  font-family: 'Righteous', 'Syne', 'Outfit', cursive, sans-serif !important;
+  font-size: 4rem;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  color: #FFFFFF;
+}
+
+.diwali-trendy-title .title-lead {
+  display: block;
+  font-family: 'Righteous', 'Syne', sans-serif;
+  font-size: 3.2rem;
+  color: #FFFFFF;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.diwali-trendy-title .price-500-pop {
+  display: inline-block;
+  font-family: 'Righteous', 'Bungee', cursive, sans-serif;
+  font-size: 4.8rem;
+  line-height: 0.95;
+  color: #FFE600;
+  background: linear-gradient(180deg, #FFF566 0%, #FFD000 45%, #FF9500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(3px 4px 0px #052659) drop-shadow(0 0 25px rgba(255, 215, 0, 0.6));
+  position: relative;
+  letter-spacing: -0.02em;
+  margin-top: 0.2rem;
+}
+
+.diwali-trendy-title .rupee-char {
+  font-size: 0.85em;
+  margin-right: 2px;
+  vertical-align: 0.05em;
+}
+
+.diwali-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #E2E8F0;
+  max-width: 660px;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* CTA buttons with festive glow */
+.diwali-cta-btn {
+  background: linear-gradient(135deg, #FFE600 0%, #F59E0B 100%) !important;
+  color: #0F172A !important;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.45), 0 8px 16px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid #FEF08A !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.diwali-cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.65), 0 12px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.diwali-secondary-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(251, 191, 36, 0.4) !important;
+  backdrop-filter: blur(8px);
+  font-weight: 700;
+}
+
+.diwali-secondary-btn:hover {
+  background: rgba(251, 191, 36, 0.2) !important;
+  border-color: #FBBF24 !important;
+  transform: translateY(-2px);
+}
+
+.diwali-stats .stat-highlight {
+  color: #FDE047 !important;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.4);
+}
+
+/* ==========================================================
+   FIREWORKS HALF-CIRCLE TO SQUARE BANNER SHAPE
+   ========================================================== */
+.diwali-hero-grid {
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: center;
+  min-height: 560px;
+  position: relative;
+  z-index: 5;
+}
+
+.diwali-hero-left {
+  max-width: 700px;
+  position: relative;
+  z-index: 10;
+}
+
+.diwali-hero-spacer {
+  pointer-events: none;
+}
+
+/* Semicircle (half circle) on the left side, followed as a square to the right till the edge of the banner */
+.hero-fireworks-shape {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 44%;
+  min-width: 460px;
+  max-width: 680px;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  border: 3.5px solid rgba(251, 191, 36, 0.85);
+  border-right: none;
+  box-shadow: 
+    -18px 0 45px rgba(0, 0, 0, 0.75),
+    -5px 0 25px rgba(245, 158, 11, 0.45);
+  z-index: 2;
+  background-color: #05020f;
+}
+
+/* Fireworks night sky with subtle atmospheric blur and dimmed brightness */
+.fireworks-bg-img {
+  position: absolute;
+  inset: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  filter: blur(3.5px) brightness(0.65) saturate(1.1);
+}
+
+/* Character illustration leaning on ₹500 bag inside fireworks */
+.fireworks-character-img {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  height: 90%;
+  max-height: 540px;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.85));
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hero-fireworks-shape:hover .fireworks-character-img {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .diwali-hero-left {
+    max-width: 620px;
+  }
+  .hero-fireworks-shape {
+    width: 42%;
+    min-width: 420px;
+  }
+  .fireworks-character-img {
+    left: 8%;
+    height: 88%;
+  }
+}
+
+@media (max-width: 992px) {
+  .diwali-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+  }
+  .diwali-hero-spacer {
+    display: none;
+  }
+  .hero-fireworks-shape {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    width: calc(100% + 2rem);
+    margin-right: -1rem;
+    height: 420px;
+    min-width: 0;
+    border-radius: 210px 0 0 210px / 50% 0 0 50%;
+    margin-top: 1.5rem;
+  }
+  .fireworks-character-img {
+    left: 15%;
+    height: 92%;
+  }
+  .diwali-trendy-title {
+    font-size: 3.2rem;
+  }
+  .diwali-trendy-title .title-lead {
+    font-size: 2.5rem;
+  }
+  .diwali-trendy-title .price-500-pop {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-fireworks-shape {
+    height: 350px;
+    border-radius: 175px 0 0 175px / 50% 0 0 50%;
+  }
+  .fireworks-character-img {
+    left: 6%;
+    height: 94%;
+  }
+  .diwali-trendy-title {
+    font-size: 2.5rem;
+  }
+  .diwali-trendy-title .title-lead {
+    font-size: 1.9rem;
+  }
+  .diwali-trendy-title .price-500-pop {
+    font-size: 3rem;
+  }
+}
+
+

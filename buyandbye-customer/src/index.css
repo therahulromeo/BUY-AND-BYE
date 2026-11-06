@@ -1,0 +1,9 @@
+/* BUY & BYE Mens Clothing - Main Index CSS */
+@import './styles/global.css';
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

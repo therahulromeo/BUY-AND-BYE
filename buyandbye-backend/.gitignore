@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Environment variables & secrets (CRITICAL: Do not upload MongoDB/SMTP secrets)
+.env
+.env.*
+!.env.example
+
+# Local Data Storage & Database Dumps (Contains cleartext credentials & customer records)
+data/store.json
+data/*.json
+data/*.db
+data/*.sqlite
+*.sql
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor & IDE files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
