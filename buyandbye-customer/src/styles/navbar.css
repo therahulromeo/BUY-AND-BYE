@@ -227,12 +227,70 @@
   display: none;
 }
 
+.mobile-search-toggle {
+  display: none;
+}
+
+.mobile-search-dropdown {
+  padding: 0.75rem 1rem;
+  background: #FFFFFF;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1.5px solid var(--border-light);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 999;
+  animation: slideDown 0.2s ease-out;
+}
+
+.mobile-search-inner {
+  position: relative;
+  width: 100%;
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: 0.65rem 2.5rem 0.65rem 2.6rem;
+  background: var(--bg-subtle);
+  border: 1.5px solid var(--primary-300);
+  border-radius: var(--radius-full);
+  font-size: 16px !important;
+  color: var(--dark-900);
+}
+
+.mobile-search-input:focus {
+  background: #FFFFFF;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(0, 86, 210, 0.15);
+  outline: none;
+}
+
+.mobile-search-icon-pos {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--dark-400);
+  pointer-events: none;
+}
+
+.mobile-search-clear-pos {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--dark-400);
+  cursor: pointer;
+  padding: 4px;
+}
+
 @media (max-width: 992px) {
   .navbar-nav {
     display: none;
   }
   .navbar-search-container {
-    max-width: 320px;
+    max-width: 280px;
   }
   .mobile-menu-btn {
     display: inline-flex;
@@ -240,9 +298,13 @@
 }
 
 @media (max-width: 768px) {
+  .navbar-inner {
+    height: var(--header-height-mobile, 62px);
+    gap: 0.75rem;
+  }
   .order-history-nav-btn {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     justify-content: center;
   }
@@ -266,8 +328,50 @@
   .navbar-search-container {
     display: none;
   }
+  .mobile-search-toggle {
+    display: inline-flex;
+  }
   .cart-price-text {
     display: none;
+  }
+  .nav-actions {
+    gap: 0.45rem;
+  }
+  .action-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .cart-btn-pill {
+    padding: 0.45rem 0.7rem;
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .brand-logo-img {
+    height: 35px;
+  }
+  .navbar-inner {
+    gap: 0.35rem;
+  }
+  .nav-actions {
+    gap: 0.35rem;
+  }
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+  /* On very small phones, order history and profile are accessed cleanly via hamburger menu */
+  .order-history-nav-btn,
+  .profile-nav-btn {
+    display: none !important;
+  }
+  .cart-btn-pill {
+    padding: 0.4rem 0.55rem;
+  }
+  .cart-count-bubble {
+    font-size: 0.7rem;
+    padding: 1px 5px;
   }
 }
 

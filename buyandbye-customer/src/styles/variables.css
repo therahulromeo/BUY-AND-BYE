@@ -90,5 +90,9 @@
   /* Layout Containers */
   --container-max: 1280px;
   --container-wide: 1440px;
-  --header-height: 80px;
+  --header-height: 76px;
+  --header-height-mobile: 62px;
+  --container-padding: 1.5rem;
+  --container-padding-mobile: 1rem;
+  --container-padding-xs: 0.75rem;
 }

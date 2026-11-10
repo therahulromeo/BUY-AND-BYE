@@ -59,7 +59,7 @@ export default function ProductQuickViewModal() {
           </button>
         </div>
 
-        <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: '1fr 1.15fr', gap: '2rem' }}>
+        <div className="modal-body quickview-grid">
           {/* Left: Gallery */}
           <div>
             <div
@@ -206,7 +206,7 @@ export default function ProductQuickViewModal() {
             </div>
 
             {/* CTAs: Add to Cart & Buy Now */}
-            <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
               <button
                 className="btn btn-primary btn-lg"
                 style={{ flex: 1 }}

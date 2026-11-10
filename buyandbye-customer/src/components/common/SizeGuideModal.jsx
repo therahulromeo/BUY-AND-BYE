@@ -25,88 +25,92 @@ export default function SizeGuideModal() {
           <h4 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--dark-900)', marginBottom: '0.75rem' }}>
             Men's Shirts Size Specs (Inches)
           </h4>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem', marginBottom: '2rem' }}>
-            <thead>
-              <tr style={{ background: 'var(--primary-50)', textAlign: 'left', borderBottom: '2px solid var(--primary-200)' }}>
-                <th style={{ padding: '8px 12px' }}>Size</th>
-                <th style={{ padding: '8px 12px' }}>Chest (in)</th>
-                <th style={{ padding: '8px 12px' }}>Shoulder (in)</th>
-                <th style={{ padding: '8px 12px' }}>Length (in)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>S (38)</td>
-                <td style={{ padding: '8px 12px' }}>39"</td>
-                <td style={{ padding: '8px 12px' }}>17.5"</td>
-                <td style={{ padding: '8px 12px' }}>29"</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>M (40)</td>
-                <td style={{ padding: '8px 12px' }}>41"</td>
-                <td style={{ padding: '8px 12px' }}>18.2"</td>
-                <td style={{ padding: '8px 12px' }}>29.5"</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)', background: 'var(--yellow-50)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700, color: 'var(--primary-700)' }}>L (42) — Standard</td>
-                <td style={{ padding: '8px 12px' }}>43"</td>
-                <td style={{ padding: '8px 12px' }}>19"</td>
-                <td style={{ padding: '8px 12px' }}>30"</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>XL (44)</td>
-                <td style={{ padding: '8px 12px' }}>45"</td>
-                <td style={{ padding: '8px 12px' }}>19.8"</td>
-                <td style={{ padding: '8px 12px' }}>30.5"</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>XXL (46)</td>
-                <td style={{ padding: '8px 12px' }}>47"</td>
-                <td style={{ padding: '8px 12px' }}>20.5"</td>
-                <td style={{ padding: '8px 12px' }}>31"</td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', marginBottom: '2rem' }}>
+            <table style={{ width: '100%', minWidth: '320px', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+              <thead>
+                <tr style={{ background: 'var(--primary-50)', textAlign: 'left', borderBottom: '2px solid var(--primary-200)' }}>
+                  <th style={{ padding: '8px 12px' }}>Size</th>
+                  <th style={{ padding: '8px 12px' }}>Chest (in)</th>
+                  <th style={{ padding: '8px 12px' }}>Shoulder (in)</th>
+                  <th style={{ padding: '8px 12px' }}>Length (in)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>S (38)</td>
+                  <td style={{ padding: '8px 12px' }}>39"</td>
+                  <td style={{ padding: '8px 12px' }}>17.5"</td>
+                  <td style={{ padding: '8px 12px' }}>29"</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>M (40)</td>
+                  <td style={{ padding: '8px 12px' }}>41"</td>
+                  <td style={{ padding: '8px 12px' }}>18.2"</td>
+                  <td style={{ padding: '8px 12px' }}>29.5"</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--border-light)', background: 'var(--yellow-50)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700, color: 'var(--primary-700)' }}>L (42) — Standard</td>
+                  <td style={{ padding: '8px 12px' }}>43"</td>
+                  <td style={{ padding: '8px 12px' }}>19"</td>
+                  <td style={{ padding: '8px 12px' }}>30"</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>XL (44)</td>
+                  <td style={{ padding: '8px 12px' }}>45"</td>
+                  <td style={{ padding: '8px 12px' }}>19.8"</td>
+                  <td style={{ padding: '8px 12px' }}>30.5"</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>XXL (46)</td>
+                  <td style={{ padding: '8px 12px' }}>47"</td>
+                  <td style={{ padding: '8px 12px' }}>20.5"</td>
+                  <td style={{ padding: '8px 12px' }}>31"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h4 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--dark-900)', marginBottom: '0.75rem' }}>
             Men's Trousers & Chinos (Inches)
           </h4>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
-            <thead>
-              <tr style={{ background: 'var(--primary-50)', textAlign: 'left', borderBottom: '2px solid var(--primary-200)' }}>
-                <th style={{ padding: '8px 12px' }}>Waist</th>
-                <th style={{ padding: '8px 12px' }}>Hip (in)</th>
-                <th style={{ padding: '8px 12px' }}>Thigh (in)</th>
-                <th style={{ padding: '8px 12px' }}>Inseam (in)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>30</td>
-                <td style={{ padding: '8px 12px' }}>38"</td>
-                <td style={{ padding: '8px 12px' }}>23"</td>
-                <td style={{ padding: '8px 12px' }}>31"</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>32</td>
-                <td style={{ padding: '8px 12px' }}>40"</td>
-                <td style={{ padding: '8px 12px' }}>24"</td>
-                <td style={{ padding: '8px 12px' }}>31.5"</td>
-              </tr>
-              <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>34</td>
-                <td style={{ padding: '8px 12px' }}>42"</td>
-                <td style={{ padding: '8px 12px' }}>25"</td>
-                <td style={{ padding: '8px 12px' }}>32"</td>
-              </tr>
-              <tr>
-                <td style={{ padding: '8px 12px', fontWeight: 700 }}>36</td>
-                <td style={{ padding: '8px 12px' }}>44"</td>
-                <td style={{ padding: '8px 12px' }}>26"</td>
-                <td style={{ padding: '8px 12px' }}>32.5"</td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+            <table style={{ width: '100%', minWidth: '320px', borderCollapse: 'collapse', fontSize: '0.875rem' }}>
+              <thead>
+                <tr style={{ background: 'var(--primary-50)', textAlign: 'left', borderBottom: '2px solid var(--primary-200)' }}>
+                  <th style={{ padding: '8px 12px' }}>Waist</th>
+                  <th style={{ padding: '8px 12px' }}>Hip (in)</th>
+                  <th style={{ padding: '8px 12px' }}>Thigh (in)</th>
+                  <th style={{ padding: '8px 12px' }}>Inseam (in)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>30</td>
+                  <td style={{ padding: '8px 12px' }}>38"</td>
+                  <td style={{ padding: '8px 12px' }}>23"</td>
+                  <td style={{ padding: '8px 12px' }}>31"</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>32</td>
+                  <td style={{ padding: '8px 12px' }}>40"</td>
+                  <td style={{ padding: '8px 12px' }}>24"</td>
+                  <td style={{ padding: '8px 12px' }}>31.5"</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--border-light)' }}>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>34</td>
+                  <td style={{ padding: '8px 12px' }}>42"</td>
+                  <td style={{ padding: '8px 12px' }}>25"</td>
+                  <td style={{ padding: '8px 12px' }}>32"</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: '8px 12px', fontWeight: 700 }}>36</td>
+                  <td style={{ padding: '8px 12px' }}>44"</td>
+                  <td style={{ padding: '8px 12px' }}>26"</td>
+                  <td style={{ padding: '8px 12px' }}>32.5"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <div style={{ marginTop: '1.5rem', background: 'var(--bg-subtle)', padding: '12px', borderRadius: '8px', fontSize: '0.8rem', color: 'var(--dark-600)' }}>
             💡 <strong>Fit Tip:</strong> If you prefer a relaxed comfort silhouette, we recommend choosing one size up. All garments include pre-washed anti-shrinkage treatment.

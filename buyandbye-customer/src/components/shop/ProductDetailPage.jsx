@@ -168,20 +168,9 @@ export default function ProductDetailPage({ product, onBack }) {
         </div>
       </div>
 
-      <div className="container-wide" style={{ paddingTop: '2rem' }}>
+      <div className="container-wide" style={{ paddingTop: '1.5rem' }}>
         {/* Main Product Showcase Grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '2.5rem',
-            background: '#FFFFFF',
-            borderRadius: '20px',
-            padding: '2rem',
-            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.05)',
-            marginBottom: '3rem',
-          }}
-        >
+        <div className="pdp-showcase-grid">
           {/* Left Column: Image Gallery */}
           <div>
             <div
@@ -244,18 +233,7 @@ export default function ProductDetailPage({ product, onBack }) {
             )}
 
             {/* Value Guarantees Banner */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(2, 1fr)',
-                gap: '0.75rem',
-                marginTop: '1.5rem',
-                padding: '1rem',
-                background: 'var(--primary-50)',
-                borderRadius: '12px',
-                border: '1px solid var(--primary-100)',
-              }}
-            >
+            <div className="pdp-guarantees-grid">
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.8rem', fontWeight: 600, color: 'var(--dark-800)' }}>
                 <Truck size={18} color="var(--primary-600)" />
                 <span>2-Day Express Delivery</span>
@@ -471,27 +449,24 @@ export default function ProductDetailPage({ product, onBack }) {
             </div>
 
             {/* Buying Action CTAs */}
-            <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.75rem', flexWrap: 'wrap' }}>
+            <div className="pdp-actions-row">
               <button
-                className="btn btn-primary btn-lg"
-                style={{ flex: 1, minWidth: '180px', padding: '0.9rem 1.5rem', fontSize: '1rem', fontWeight: 800 }}
+                className="btn btn-primary btn-lg pdp-btn-cta"
                 onClick={handleAddToCart}
                 disabled={selectedSizeStock <= 0}
               >
                 <ShoppingBag size={18} /> Add to Bag
               </button>
               <button
-                className="btn btn-yellow btn-lg"
-                style={{ flex: 1, minWidth: '180px', padding: '0.9rem 1.5rem', fontSize: '1rem', fontWeight: 800 }}
+                className="btn btn-yellow btn-lg pdp-btn-cta"
                 onClick={handleBuyNow}
                 disabled={selectedSizeStock <= 0}
               >
                 <Zap size={18} /> Buy Now
               </button>
               <button
-                className={`btn btn-outline btn-icon ${isFavorited ? 'active' : ''}`}
+                className={`btn btn-outline btn-icon pdp-wishlist-btn ${isFavorited ? 'active' : ''}`}
                 onClick={() => toggleWishlist(product)}
-                style={{ width: '52px', height: '52px', color: isFavorited ? '#EF4444' : 'inherit' }}
                 title="Save to Wishlist"
               >
                 <Heart size={22} fill={isFavorited ? '#EF4444' : 'none'} color={isFavorited ? '#EF4444' : 'currentColor'} />

@@ -24,14 +24,7 @@ export default function Footer() {
   return (
     <footer id="contact-section" style={{ background: 'var(--dark-950)', color: '#FFFFFF', paddingTop: '4.5rem', borderTop: '3px solid var(--yellow-500)' }}>
       <div className="container-wide" style={{ paddingBottom: '3.5rem' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1.4fr 1fr 1fr 1.2fr',
-            gap: '3rem',
-            marginBottom: '3rem',
-          }}
-        >
+        <div className="footer-grid">
           {/* Brand Info */}
           <div>
             <a
@@ -194,6 +187,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div
+          className="footer-bottom-bar"
           style={{
             borderTop: '1px solid rgba(255, 255, 255, 0.1)',
             paddingTop: '2rem',

@@ -50,7 +50,7 @@ const getSubCategoryIcon = (subId) => {
   return Shirt;
 };
 
-export default function FilterSidebar() {
+export default function FilterSidebar({ isMobile = false, onClose }) {
   const {
     selectedCategory,
     setSelectedCategory,
@@ -135,7 +135,7 @@ export default function FilterSidebar() {
   })();
 
   return (
-    <aside className="filter-sidebar">
+    <aside className={isMobile ? "filter-sidebar-mobile" : "filter-sidebar"}>
       {/* Categories Header & Reset */}
       <div
         style={{
@@ -337,6 +337,18 @@ export default function FilterSidebar() {
               />
             </div>
           ))}
+        </div>
+      )}
+
+      {isMobile && onClose && (
+        <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--border-light)' }}>
+          <button
+            className="btn btn-primary"
+            style={{ width: '100%', justifyContent: 'center', padding: '0.75rem', fontWeight: 800 }}
+            onClick={onClose}
+          >
+            Apply & View Products
+          </button>
         </div>
       )}
     </aside>

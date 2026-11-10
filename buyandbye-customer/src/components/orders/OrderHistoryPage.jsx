@@ -384,7 +384,7 @@ export default function OrderHistoryPage({ onBack }) {
                         Purchased Items ({ord.items?.length || 0})
                       </div>
 
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '0.75rem', marginBottom: '1.25rem' }}>
+                      <div className="order-items-preview-grid">
                         {ord.items?.map((it, idx) => (
                           <div
                             key={idx}
@@ -622,7 +622,7 @@ export default function OrderHistoryPage({ onBack }) {
                         )}
 
                         {/* Destination Address & Fulfillment Queue Sync */}
-                        <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '1rem', fontSize: '0.85rem' }}>
+                        <div className="order-dest-queue-grid">
                           <div style={{ background: '#FFFFFF', padding: '1rem', borderRadius: '12px', border: '1px solid var(--border-light)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 800, color: 'var(--dark-900)', marginBottom: '0.4rem' }}>
                               <MapPin size={16} color="var(--primary-500)" />

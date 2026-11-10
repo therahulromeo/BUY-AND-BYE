@@ -361,7 +361,7 @@ export default function CustomerDetailsPage({ onBack, onOrderSuccess }) {
                             style={{ marginTop: '1.25rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-light)' }}
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+                            <div className="checkout-form-grid-2" style={{ marginBottom: '1rem' }}>
                               <div className="form-group">
                                 <label className="form-label">Recipient Full Name *</label>
                                 <input
@@ -433,7 +433,7 @@ export default function CustomerDetailsPage({ onBack, onOrderSuccess }) {
                               />
                             </div>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+                            <div className="checkout-form-grid-3" style={{ marginBottom: '1rem' }}>
                               <div className="form-group">
                                 <label className="form-label">City *</label>
                                 <input
@@ -579,7 +579,7 @@ export default function CustomerDetailsPage({ onBack, onOrderSuccess }) {
                           </span>
                         </div>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', marginBottom: '1.25rem' }}>
+                        <div className="checkout-form-grid-2" style={{ gap: '1.25rem', marginBottom: '1.25rem' }}>
                           <div className="form-group">
                             <label className="form-label" style={{ fontWeight: 700 }}>Customer Full Name *</label>
                             <input
@@ -662,7 +662,7 @@ export default function CustomerDetailsPage({ onBack, onOrderSuccess }) {
                           />
                         </div>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
+                        <div className="checkout-form-grid-3">
                           <div className="form-group">
                             <label className="form-label">City *</label>
                             <input
@@ -730,7 +730,7 @@ export default function CustomerDetailsPage({ onBack, onOrderSuccess }) {
                       </button>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', fontSize: '0.875rem' }}>
+                    <div className="checkout-form-grid-2" style={{ gap: '1rem', fontSize: '0.875rem' }}>
                       <div>
                         <div style={{ color: 'var(--dark-500)', fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase' }}>
                           Customer &amp; Tracking Phone

@@ -18,19 +18,13 @@ export default function CustomerReviews() {
           </p>
         </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '1.75rem',
-          }}
-        >
+        <div className="reviews-grid">
           {TESTIMONIALS.map((t, idx) => (
             <div
               key={idx}
               className="card"
               style={{
-                padding: '2rem',
+                padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',

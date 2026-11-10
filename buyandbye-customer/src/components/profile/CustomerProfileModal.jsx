@@ -373,9 +373,8 @@ export default function CustomerProfileModal() {
 
                 {/* Quick Account Metrics */}
                 <div
+                  className="profile-form-grid-2"
                   style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
                     gap: '0.75rem',
                     marginTop: '1.25rem',
                     paddingTop: '1rem',
@@ -459,7 +458,7 @@ export default function CustomerProfileModal() {
                       Edit Customer Information &amp; Address
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem', marginBottom: '0.85rem' }}>
+                    <div className="profile-form-grid-2" style={{ marginBottom: '0.85rem' }}>
                       <div className="form-group">
                         <label className="form-label" style={{ fontSize: '0.8rem' }}>Full Name *</label>
                         <input
@@ -525,7 +524,7 @@ export default function CustomerProfileModal() {
                       />
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem' }}>
+                    <div className="profile-form-grid-3">
                       <div className="form-group">
                         <label className="form-label" style={{ fontSize: '0.8rem' }}>City *</label>
                         <input
@@ -630,7 +629,7 @@ export default function CustomerProfileModal() {
                       </button>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', fontSize: '0.875rem' }}>
+                    <div className="profile-form-grid-2" style={{ gap: '1rem', fontSize: '0.875rem' }}>
                       <div>
                         <div style={{ color: 'var(--dark-500)', fontSize: '0.75rem', fontWeight: 600 }}>Mobile Number (SMS Tracking)</div>
                         <div style={{ fontWeight: 800, color: 'var(--primary-700)', marginTop: '2px', display: 'flex', alignItems: 'center', gap: '5px' }}>
@@ -756,7 +755,7 @@ export default function CustomerProfileModal() {
                       Delivery &amp; Account Details
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.85rem', marginBottom: '0.85rem' }}>
+                    <div className="profile-form-grid-2" style={{ marginBottom: '0.85rem' }}>
                       <div className="form-group">
                         <label className="form-label" style={{ fontSize: '0.8rem', fontWeight: 700 }}>
                           Full Name *
@@ -820,7 +819,7 @@ export default function CustomerProfileModal() {
                       />
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem' }}>
+                    <div className="profile-form-grid-3">
                       <div className="form-group">
                         <label className="form-label" style={{ fontSize: '0.8rem', fontWeight: 700 }}>
                           City *

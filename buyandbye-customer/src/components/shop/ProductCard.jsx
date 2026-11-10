@@ -140,6 +140,15 @@ export default function ProductCard({ product }) {
             <Zap size={12} style={{ display: 'inline', verticalAlign: 'middle' }} /> Only {product.stock} left in stock!
           </div>
         )}
+
+        {/* Mobile Direct Add to Bag CTA */}
+        <button
+          className="mobile-card-quick-add"
+          onClick={handleQuickAdd}
+          aria-label={`Add ${product.product_name} to cart`}
+        >
+          <ShoppingBag size={14} /> Add to Bag
+        </button>
       </div>
     </div>
   );

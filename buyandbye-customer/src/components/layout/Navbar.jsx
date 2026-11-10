@@ -22,6 +22,7 @@ export default function Navbar() {
   } = useStore();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 
   const handleHomeClick = (e) => {
     e?.preventDefault();
@@ -118,6 +119,16 @@ export default function Navbar() {
 
         {/* Right Action Icons */}
         <div className="nav-actions">
+          {/* Mobile Search Toggle Button */}
+          <button
+            className="action-btn mobile-search-toggle"
+            onClick={() => setMobileSearchOpen(!mobileSearchOpen)}
+            title="Search Products"
+            aria-label="Toggle Search"
+          >
+            {mobileSearchOpen ? <X size={20} /> : <Search size={20} />}
+          </button>
+
           {/* Wishlist Button */}
           <button
             className="action-btn"
@@ -202,6 +213,28 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Mobile Search Dropdown */}
+      {mobileSearchOpen && (
+        <div className="mobile-search-dropdown">
+          <div className="mobile-search-inner">
+            <Search size={18} className="mobile-search-icon-pos" />
+            <input
+              type="text"
+              className="mobile-search-input"
+              placeholder="Search shirts, chinos, linen, polo..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              autoFocus
+            />
+            {searchQuery && (
+              <button className="mobile-search-clear-pos" onClick={() => setSearchQuery('')}>
+                <X size={16} />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (

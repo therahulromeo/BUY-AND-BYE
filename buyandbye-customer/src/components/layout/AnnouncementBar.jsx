@@ -44,7 +44,7 @@ export default function AnnouncementBar() {
         </div>
 
         {/* Right Side: Trust & Quality Indicators */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#CBD5E1', fontSize: '0.78rem' }}>
+        <div className="announcement-right" style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#CBD5E1', fontSize: '0.78rem' }}>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
             <Sparkles size={13} color="var(--yellow-400)" /> 100% Premium Cotton &amp; Linen
           </span>

@@ -69,7 +69,7 @@ export default function OrderSuccessModal({ order, onClose }) {
         style={{ maxWidth: '680px', maxHeight: '92vh', overflowY: 'auto' }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="success-card" style={{ padding: '2rem 1.75rem' }}>
+        <div className="success-card" style={{ padding: 'clamp(1rem, 3.5vw, 1.75rem)' }}>
           {/* Success Checkmark & Celebration Header */}
           <div className="success-icon-wrap" style={{ width: '64px', height: '64px', marginBottom: '1rem' }}>
             <CheckCircle2 size={38} />
@@ -288,7 +288,7 @@ export default function OrderSuccessModal({ order, onClose }) {
               )}
 
               {/* Delivery Address & Items Grid */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
+              <div className="order-dest-queue-grid" style={{ marginBottom: '1.5rem' }}>
                 {/* Destination Details */}
                 <div style={{ background: 'var(--bg-subtle)', padding: '1rem', borderRadius: '12px', fontSize: '0.85rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 800, color: 'var(--dark-900)', marginBottom: '0.5rem' }}>
@@ -378,7 +378,7 @@ export default function OrderSuccessModal({ order, onClose }) {
                   marginBottom: '1.5rem',
                 }}
               >
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+                <div className="order-dest-queue-grid" style={{ marginBottom: '1rem' }}>
                   <div>
                     <span style={{ color: 'var(--dark-400)', fontSize: '0.75rem', textTransform: 'uppercase', fontWeight: 700 }}>
                       Customer & Contact

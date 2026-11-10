@@ -174,3 +174,65 @@
   background: var(--primary-50);
   border-color: var(--primary-300);
 }
+
+/* Mobile Responsive Tracking Styles */
+@media (max-width: 600px) {
+  .tracking-timeline {
+    margin: 1.5rem 0;
+  }
+  .timeline-dot {
+    width: 30px;
+    height: 30px;
+  }
+  .timeline-dot svg {
+    width: 14px;
+    height: 14px;
+  }
+  .tracking-timeline::before,
+  .timeline-progress-line {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+  }
+  .timeline-label {
+    font-size: 0.65rem;
+  }
+  .timeline-step {
+    max-width: 68px;
+  }
+  .tracking-tab-btn {
+    padding: 8px 10px;
+    font-size: 0.78rem;
+    gap: 4px;
+  }
+  .order-tracking-nav-tabs {
+    padding: 3px;
+    gap: 3px;
+  }
+  .order-tracking-info-banner {
+    padding: 0.85rem 1rem;
+    font-size: 0.825rem;
+  }
+}
+
+/* Order History Cards Responsive */
+.order-items-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.order-dest-queue-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 680px) {
+  .order-dest-queue-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}

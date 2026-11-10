@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { SlidersHorizontal, X } from 'lucide-react';
 import { ToastProvider } from './context/ToastContext';
 import { StoreProvider, useStore } from './context/StoreContext';
 import AnnouncementBar from './components/layout/AnnouncementBar';
@@ -78,9 +79,12 @@ function MainStore() {
     setOrderHistoryPageOpen,
     selectedProduct,
     setSelectedProduct,
+    selectedCategory,
+    setSelectedCategory,
   } = useStore();
 
   const [placedOrder, setPlacedOrder] = useState(null);
+  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   // If customer is viewing the Order History Page
   if (orderHistoryPageOpen) {
@@ -158,6 +162,44 @@ function MainStore() {
             </div>
           </div>
 
+          {/* Mobile Filter & Quick Category Chips Bar */}
+          <div className="mobile-filter-strip">
+            <button
+              className="mobile-filter-open-btn"
+              onClick={() => setMobileFilterOpen(true)}
+              aria-label="Open Filter Options"
+            >
+              <SlidersHorizontal size={14} />
+              <span>Filters</span>
+              {selectedCategory && selectedCategory !== 'all' && (
+                <span className="mobile-filter-badge">1</span>
+              )}
+            </button>
+
+            <div className="mobile-filter-quick-pills">
+              {[
+                { id: 'all', label: 'All' },
+                { id: 'shirt', label: 'Shirts' },
+                { id: 't-shirts', label: 'T-Shirts' },
+                { id: 'pants', label: 'Pants' },
+                { id: 'accessories', label: 'Accessories' },
+              ].map((cat) => {
+                const isActive =
+                  selectedCategory === cat.id ||
+                  (cat.id === 'shirt' && (selectedCategory?.includes('shirt') || selectedCategory === 'formal-shirts' || selectedCategory === 'casual-shirts'));
+                return (
+                  <button
+                    key={cat.id}
+                    className={`quick-filter-chip ${isActive ? 'active' : ''}`}
+                    onClick={() => setSelectedCategory(cat.id)}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="catalog-layout">
             <FilterSidebar />
             <ProductGrid />
@@ -178,6 +220,26 @@ function MainStore() {
       <SizeGuideModal />
       <OrderSuccessModal order={placedOrder} onClose={() => setPlacedOrder(null)} />
       <CustomerProfileModal />
+
+      {/* Mobile Filter Drawer */}
+      {mobileFilterOpen && (
+        <div className="mobile-filter-modal-overlay" onClick={() => setMobileFilterOpen(false)}>
+          <div className="mobile-filter-modal-panel" onClick={(e) => e.stopPropagation()}>
+            <div className="mobile-filter-header">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 800, fontSize: '1.05rem', color: 'var(--dark-900)' }}>
+                <SlidersHorizontal size={17} color="var(--primary-600)" />
+                <span>Filters &amp; Categories</span>
+              </div>
+              <button className="drawer-close-btn" onClick={() => setMobileFilterOpen(false)}>
+                <X size={18} />
+              </button>
+            </div>
+            <div className="mobile-filter-body">
+              <FilterSidebar isMobile onClose={() => setMobileFilterOpen(false)} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
